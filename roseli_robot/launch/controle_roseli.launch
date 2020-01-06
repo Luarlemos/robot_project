@@ -1,0 +1,13 @@
+<launch>
+	
+        <node pkg="roseli" type="move_md25_3" name="MD_25" output="screen">
+	   <param name="get_odom_stream" value="odom"/>
+           <param name="reset_enc_stream" value="odom"/>
+	</node>
+	<node pkg="roseli_robot" type="ROS_CONTROLE_FINAL" name="controle" output="screen"/>
+        <node pkg="roseli_robot" type="ros_sonar1" name="sonar1" output="screen"/>
+        <node pkg="roseli_robot" type="ros_sonar2" name="sonar2" output="screen"/>
+        <node pkg="roseli_robot" type="ros_sonar3" name="sonar3" output="screen"/>
+	
+
+</launch>
